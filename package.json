@@ -1,0 +1,30 @@
+{
+  "name": "esh_ads",
+  "version": "1.0.0",
+  "description": "前端被动服务",
+  "main": "index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wspandihai/ESH-ads-1.git"
+  },
+  "author": "wspandihai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wspandihai/ESH-ads-1/issues"
+  },
+  "homepage": "https://github.com/wspandihai/ESH-ads-1#readme",
+  "dependencies": {
+    "express": "~3.4.8",
+    "formidable": "^1.0.17",
+    "log4js": "^0.6.18",
+    "mime": "^1.2.11",
+    "ndir": "^0.1.5",
+    "uglify-js": "^2.4.15",
+    "clean-css": "^2.2.23",
+    "amd-simplecombine": "1.0.4",
+    "moment": "2.9.0"
+  }
+}
