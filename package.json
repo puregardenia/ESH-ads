@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wspandihai/ESH-ads-1.git"
+    "url": "git+git@github.com:easysofthome/ESH-ads.git"
   },
   "author": "wspandihai",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wspandihai/ESH-ads-1/issues"
+    "url": "git@github.com:easysofthome/ESH-ads.git/issues"
   },
-  "homepage": "https://github.com/wspandihai/ESH-ads-1#readme",
+  "homepage": "git@github.com:easysofthome/ESH-ads.git#readme",
   "dependencies": {
     "express": "~3.4.8",
     "formidable": "^1.0.17",
