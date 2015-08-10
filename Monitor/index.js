@@ -1,18 +1,17 @@
 var watch = require('watch');
 
-var config = require('../config.js');
 
 
 var Cloud = require('esh-deployment-cloud');
 
-Cloud = new Cloud(config.qn);
 
 var File = require('esh-deployment-cloud/File');
 
 
 
-module.exports.start = function() {
-
+module.exports.start = function(configPath) {
+	var config = require(configPath);
+	Cloud = new Cloud(config.qn);
 	var removerCloudKey = function(f) {
 		var file = new File(f, config.assets_path);
 		file.asdok = true;

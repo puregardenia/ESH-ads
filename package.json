@@ -1,6 +1,6 @@
 {
   "name": "esh-ads",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "前端被动服务",
   "main": "index",
   "scripts": {
@@ -19,6 +19,7 @@
   "dependencies": {
     "amd-simplecombine": "1.0.4",
     "clean-css": "^2.2.23",
+    "cluster": "^0.7.7",
     "commander": "^2.8.1",
     "esh-deployment-cloud": "1.0.2",
     "express": "~3.4.8",

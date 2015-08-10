@@ -1,7 +1,7 @@
 var less = require("less")
 var fs = require("fs")
 var path = require("path")
-var config = require("./../config.js")
+var config = global.__CONFIG;
 
 module.exports = function(filePath, callback) {
     var parser = new(less.Parser)({
