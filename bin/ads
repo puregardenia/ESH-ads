@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+
+var monitor = require('../Monitor');
+
+
+
+var startMonitor = function() {
+	monitor.start();
+}
+
+
+program
+	.version(require('../package').version)
+	.option('-m, --monitor', '监控', startMonitor)
+	.option('-s, --start', '启动服务', function() {
+		require('../index');
+	});
+
+program.parse(process.argv);

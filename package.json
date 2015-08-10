@@ -1,6 +1,6 @@
 {
-  "name": "esh_ads",
-  "version": "1.0.0",
+  "name": "esh-ads",
+  "version": "1.0.2",
   "description": "前端被动服务",
   "main": "index",
   "scripts": {
@@ -17,14 +17,20 @@
   },
   "homepage": "git@github.com:easysofthome/ESH-ads.git#readme",
   "dependencies": {
+    "amd-simplecombine": "1.0.4",
+    "clean-css": "^2.2.23",
+    "commander": "^2.8.1",
+    "esh-deployment-cloud": "1.0.2",
     "express": "~3.4.8",
     "formidable": "^1.0.17",
     "log4js": "^0.6.18",
     "mime": "^1.2.11",
+    "moment": "2.9.0",
     "ndir": "^0.1.5",
     "uglify-js": "^2.4.15",
-    "clean-css": "^2.2.23",
-    "amd-simplecombine": "1.0.4",
-    "moment": "2.9.0"
+    "watch": "^0.16.0"
+  },
+  "bin": {
+    "ads": "bin/ads"
   }
 }
