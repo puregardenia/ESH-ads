@@ -1,6 +1,6 @@
 var js_compile = require("./../util/js-compile.js");
 var content_type_inspector = require("./../util/content-type-inspector.js")
-var config = require("./../config.js");
+var config = global.__CONFIG;
 var path = require("path");
 var fs = require("fs");
 module.exports = function(req, res, next) {
