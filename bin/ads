@@ -4,6 +4,7 @@ var program = require('commander');
 
 var main = require('../index');
 
+
 program
 	.version(require('../package').version)
 	.command('run')

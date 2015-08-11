@@ -2,7 +2,6 @@ var formidable = require('formidable');
 var fs = require('fs');
 var pathModule = require('path');
 var ndir = require('ndir');
-var amd_simplecombine = require('amd-simplecombine');
 
 
 module.exports = function(req, res, next) {
@@ -16,8 +15,6 @@ module.exports = function(req, res, next) {
 					if (err) {
 						throw err;
 					}
-					debugger;
-					amd_simplecombine.RemoveCache(savePath);
 					res.send('ok');
 				});
 			}
@@ -25,6 +22,4 @@ module.exports = function(req, res, next) {
 		});
 
 	});
-
-
 }

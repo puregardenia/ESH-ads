@@ -37,6 +37,7 @@ module.exports.init = function(configPath) {
 
 		app.post(/update/, require("./routes/update.js"));
 
+
 		//TODO:将amdcombo中的pkg提成全局在普通的js在请求中也可以获得到缓存
 		//seajs多文件combo和压缩输出
 		app.get(/\/Static\/(.*?)\/\$\$(.*)/i, require("./routes/sea_route.js"));

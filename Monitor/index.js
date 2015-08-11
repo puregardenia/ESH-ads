@@ -7,14 +7,13 @@ var Cloud = require('esh-deployment-cloud');
 
 var File = require('esh-deployment-cloud/File');
 
-
+var needle = require('needle');
 
 module.exports.start = function(configPath) {
 	var config = require(configPath);
 	Cloud = new Cloud(config.qn);
 	var removerCloudKey = function(f) {
 		var file = new File(f, config.assets_path);
-		file.asdok = true;
 		Cloud.Start(file);
 	}
 	watch.createMonitor(config.assets_path, function(monitor) {
