@@ -1,6 +1,6 @@
 {
   "name": "esh-ads",
-  "version": "1.2.2",
+  "version": "1.2.5",
   "description": "前端被动服务",
   "main": "index",
   "scripts": {
@@ -21,7 +21,7 @@
     "clean-css": "^2.2.23",
     "cluster": "^0.7.7",
     "commander": "^2.8.1",
-    "esh-deployment-cloud": "1.0.4",
+    "esh-deployment-cloud": "^1.0.5",
     "express": "~3.4.8",
     "formidable": "^1.0.17",
     "log4js": "^0.6.18",

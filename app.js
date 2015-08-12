@@ -40,7 +40,7 @@ module.exports.init = function(configPath) {
 
 		//TODO:将amdcombo中的pkg提成全局在普通的js在请求中也可以获得到缓存
 		//seajs多文件combo和压缩输出
-		app.get(/\/Static\/(.*?)\/\$\$(.*)/i, require("./routes/sea_route.js"));
+		app.get(/\/Static\/(.*\/?)\$\$(.*)/i, require("./routes/sea_route.js"));
 
 
 		//js 静态服务，支持压缩
