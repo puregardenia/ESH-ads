@@ -53,11 +53,11 @@ module.exports.init = function(configPath) {
 		app.get(/Static\/(.*)$/i, function(req, res, next) {
 			var _path = req.params[0]
 			var filePath = path.join(config.assets_path, _path);
-			// var fileContent = fs.readFileSync(filePath, "utf-8")
-			// res.header('Content-Type', content_type_inspector(filePath));
-			// res.send(fileContent);
-			res.header('Access-Control-Allow-Origin', '*');
-			res.sendfile(filePath);
+			var fileContent = fs.readFileSync(filePath, "utf-8")
+			res.header('Content-Type', content_type_inspector(filePath));
+			res.send(fileContent);
+			// res.header('Access-Control-Allow-Origin', '*');
+			// res.sendfile(filePath);
 		});
 
 
