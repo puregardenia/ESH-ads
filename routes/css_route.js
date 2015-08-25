@@ -10,8 +10,11 @@ module.exports = function(req, res, next) {
     if (fs.existsSync(filePath)) {
         soure = fs.readFileSync(filePath, "utf-8")
     }
-    new CleanCSS().minify(soure, function(errors, minified) {
+    new CleanCSS({
+        compatibility: 'ie8', //设置兼容模式 
+        advanced: false //取消高级特性 
+    }).minify(soure, function(errors, minified) {
         res.header('Content-Type', content_type_inspector(filePath));
-        res.send(minified);
+        res.send(minified.styles);
     });
 }
