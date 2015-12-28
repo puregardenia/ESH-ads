@@ -14,7 +14,9 @@ module.exports.start = function(configPath) {
 	Cloud = new Cloud(config.qn);
 	var CloudStart = function(f, option) {
 		var file = new File(f, config.assets_path);
-		Cloud.Start(file, option);
+		Cloud.Start(file, option, function(err, arg) {
+			console.log(f + arg);
+		});
 	}
 	watch.createMonitor(config.assets_path, function(monitor) {
 		console.log('开始监视' + config.assets_path);

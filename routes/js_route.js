@@ -7,7 +7,7 @@ module.exports = function(req, res, next) {
 	var _path = req.params[0]
 	var filePath = path.join(config.assets_path, "/js", _path + ".js");
 	var basePath = path.basename(filePath);
-	if (config.compress && (!req.query.no_compress) && (!config.exceptjs || config.exceptjs.indexOf(basePath) < 0)) {
+	if (!req.isDebug && config.compress && (!req.query.no_compress) && (!config.exceptjs || config.exceptjs.indexOf(basePath) < 0)) {
 		fileContent = js_compile(filePath);
 	} else {
 		fileContent = fs.readFileSync(filePath, "utf-8")

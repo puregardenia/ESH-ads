@@ -16,7 +16,7 @@ module.exports.Start = function(configPath) {
 		//fork一个work进程用来监控
 		cluster.fork();
 	} else if (cluster.isWorker) {
-		// var monitor = require('./Monitor');
-		// monitor.start(configPath);
+		var monitor = require('./Monitor');
+		monitor.start(configPath);
 	}
 }

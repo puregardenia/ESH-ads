@@ -33,6 +33,14 @@ module.exports.init = function(configPath) {
 			next();
 		})
 
+		app.use(function(req, res, next) {
+			req.isDebug = /\/debug\/(.*\.js|css)/g.test(req.originalUrl);
+			var regex = /debug\//g;
+			req.originalUrl = req.originalUrl.replace(regex, '');
+			req.url = req.url.replace(regex, '');
+			next();
+		})
+
 
 
 		app.post(/update/, require("./routes/update.js"));
