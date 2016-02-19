@@ -48,7 +48,19 @@ module.exports.init = function(configPath) {
 
 		//TODO:将amdcombo中的pkg提成全局在普通的js在请求中也可以获得到缓存
 		//seajs多文件combo和压缩输出
-		app.get(/\/Static\/(.*\/?)\$\$(.*)/i, require("./routes/sea_route.js"));
+		// ()匹配模式匹配出来的字符串传递给 req.params
+
+		var configPath = path.resolve(process.cwd(), 'config.js');
+		var globalConfig = require(configPath);
+		var flag = require(path.join(globalConfig.assets_path, 'rootConfig.js')).comboSyntax[0];
+
+		var regString = '';
+		for(var i=0;i<flag.length;i++){
+			regString+= "["+ flag.charAt(i) +"]";
+		}
+
+		var regex =new RegExp("\/Static\/(.*\/?)"+ regString +"(.*)",'i');			//将字符串实例化为正则表达式
+		app.get(regex, require("./routes/sea_route.js"));
 
 
 		//js 静态服务，支持压缩
